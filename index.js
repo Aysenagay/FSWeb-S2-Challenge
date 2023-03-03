@@ -124,13 +124,11 @@ console.log(cumlelereDonustur(cumleler," "));
 			6. Oluşturulan paragraf döndürülecek
 	*/
 	
-function paragrafOlustur(arraycumleler1,callback1,callback2){
-	let yeniDizi = callback2(arraycumleler1,"");
-	let son = callback1(yeniDizi[1],yeniDizi[3],yeniDizi[5],yeniDizi[7],yeniDizi[9]);
-	return son ;
-
-}
-console.log (paragrafOlustur(cumleler,cumleKur,cumlelereDonustur));
+	function paragrafOlustur(cumlelerArray,callback1, callback2){
+		let yeniDizi = callback2(cumlelerArray," ");
+		let son = callback1(yeniDizi[1],yeniDizi[3],yeniDizi[5],yeniDizi[7],yeniDizi[9]);
+		return son;
+	}
 
 
 /* 	GÖREV 3:
@@ -185,11 +183,22 @@ console.log(manav);
 				yani hem :d hem de :D sembolleri 😁'a dönüşmelidir. bunun için (.toUpperCase ve .toLowerCase metotlarından istediğinizi kullanabilirsiniz.)
 			4. elde edilen string döndürülecek
  */
+			function emojileriDonustur(emoCumle, emoList) {
+	
+				for (let key in emoList) {
+					emoCumle = emoCumle.replaceAll(key.toUpperCase(), emoList[key])
+					emoCumle = emoCumle.replaceAll(key, emoList[key])
+				}
+			
+				return emoCumle;
+			
+			}
+			
+			console.log("görev 4", emojileriDonustur("Selam :) Nasılsın :d Bugünkü olay çok komikti :P ama sonra çok şaşırdık 😱 biraz da üzüldük :( ama yine de seviliyorsun <3",emojiler));
 
-function emojileriDonustur(mesajstring,emojilernesne){
 
 
-}
+
 
 
 
