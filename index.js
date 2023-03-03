@@ -109,7 +109,6 @@ console.log (cumleKur(bircumle,"","","",""));
 
 function cumlelereDonustur(cumlearray,ayirac ){
 	return cumlearray.map(x=>x.join(ayirac));
-	
 
 }
 console.log(cumlelereDonustur(cumleler," "));
@@ -125,9 +124,13 @@ console.log(cumlelereDonustur(cumleler," "));
 			6. Oluşturulan paragraf döndürülecek
 	*/
 	
-function paragrafOlustur(/* kodlar buraya */ ){
-	/* kodlar buraya */ 
+function paragrafOlustur(arraycumleler1,callback1,callback2){
+	let yeniDizi = callback2(arraycumleler1,"");
+	let son = callback1(yeniDizi[1],yeniDizi[3],yeniDizi[5],yeniDizi[7],yeniDizi[9]);
+	return son ;
+
 }
+console.log (paragrafOlustur(cumleler,cumleKur,cumlelereDonustur));
 
 
 /* 	GÖREV 3:
@@ -135,7 +138,11 @@ function paragrafOlustur(/* kodlar buraya */ ){
 			3a. meyveler dizisinin ilk ve son elemanlarını diziden çıkartın. (.pop ve .shift metodlarını kullanın)
  */
 //3a çözümü
-/* kodlar buraya */
+
+meyveler.shift();
+console.log(meyveler);
+meyveler.pop();
+console.log(meyveler);
 
 
 
@@ -145,7 +152,9 @@ function paragrafOlustur(/* kodlar buraya */ ){
 /* 			3b.  Bir tavşan ve bir kirpi arkadaşlar sebzeler dizimizin peşine düştü. Tavşan => 🐇 , Kirpi=> 🦔 , Tavşanla kirpi sebzeleri ele geçirmek için bir plan kurdular. Tavşan diziye önden saldıracak, kirpi ise arkalarından dolaşacak. Varsayalım ki arkadaşların planları başarılı oldu. Tavşanı dizinin ilk elemanına 🐇, Kirpiyi dizinin son elemanına ekleyin 🦔 
 */
 //3b çözümü
-/* kodlar buraya */
+sebzeler.unshift("🐇");
+sebzeler.push ("🦔");
+console.log(sebzeler);
 
 
 
@@ -160,6 +169,8 @@ function paragrafOlustur(/* kodlar buraya */ ){
 /* kodlar buraya */
 
 var manav;
+manav = meyveler.concat(sebzeler);
+console.log(manav);
 
 
 
@@ -175,8 +186,8 @@ var manav;
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */){
-/* kodlar buraya */
+function emojileriDonustur(mesajstring,emojilernesne){
+
 
 }
 
